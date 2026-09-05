@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://bekwnb1ro38b"]
+
+[ext_resource type="PackedScene" uid="uid://bjyb2gd4tgjdc" path="res://tree.glb" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://7jx1uop68wd8" path="res://player.tscn" id="2_0xm2m"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_7si6p"]
+size = Vector3(100, 1, 100)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b0nqj"]
+albedo_color = Color(0.16411641, 0.11418732, 0.07592454, 1)
+
+[node name="Node3D" type="Node3D" unique_id=1088984004]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1065114802]
+mesh = SubResource("BoxMesh_7si6p")
+surface_material_override/0 = SubResource("StandardMaterial3D_b0nqj")
+
+[node name="tree2" parent="." unique_id=496778698 instance=ExtResource("1_ig7tw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2456579, 0.4930256, 0.83419156)
+
+[node name="Node3D" parent="." unique_id=2018295375 instance=ExtResource("2_0xm2m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.74436784, 1.6960902, 3.604128)
