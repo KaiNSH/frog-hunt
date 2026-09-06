@@ -1,19 +1,23 @@
 [gd_scene format=3 uid="uid://7jx1uop68wd8"]
 
 [ext_resource type="Script" uid="uid://caydooqqugk87" path="res://player.gd" id="1_4flbx"]
+[ext_resource type="PackedScene" uid="uid://niu1pfq4uyks" path="res://hud.tscn" id="2_onrkg"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7si6p"]
-size = Vector3(1, 2, 1)
+size = Vector3(0.655, 1.8, 0.574)
 
 [node name="CharacterBody3D" type="CharacterBody3D" unique_id=468010687]
 script = ExtResource("1_4flbx")
-speed = 2.0
-sensitivity = 0.1
+speed = 0.4
+sensitivity = 2.0
 
-[node name="Pitch" type="Node3D" parent="." unique_id=1967260721]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.83676606, 0)
+[node name="Head" type="Node3D" parent="." unique_id=1967260721]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.77235764, 0)
 
-[node name="Camera3D" type="Camera3D" parent="Pitch" unique_id=1271092919]
+[node name="Camera3D" type="Camera3D" parent="Head" unique_id=1271092919]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=430336931]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.21313477)
 shape = SubResource("BoxShape3D_7si6p")
+
+[node name="Hud" parent="." unique_id=1675055930 instance=ExtResource("2_onrkg")]

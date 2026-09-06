@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://niu1pfq4uyks"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_n2snw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n2snw"]
+bg_color = Color(0.87329835, 0.87329847, 0.87329817, 1)
+
+[node name="Hud" type="Control" unique_id=1675055930]
+z_index = -1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="TrapBar" type="ProgressBar" parent="." unique_id=263456652]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.500217
+anchor_top = 0.55709875
+anchor_right = 0.500217
+anchor_bottom = 0.55709875
+offset_left = -150.25
+offset_top = -5.0
+offset_right = 150.25
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+offset_transform_position_ratio = Vector2(-0.5, 0)
+mouse_filter = 2
+theme_override_styles/background = SubResource("StyleBoxEmpty_n2snw")
+theme_override_styles/fill = SubResource("StyleBoxFlat_n2snw")
+show_percentage = false
+metadata/_edit_use_anchors_ = true
+
+[node name="Stamina Bar" type="ProgressBar" parent="." unique_id=583259939]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 21.64
+offset_top = -30.0
+offset_right = 385.64
+offset_bottom = -15.844971
+grow_vertical = 0
+mouse_filter = 2
+value = 100.0
+allow_greater = true
+allow_lesser = true
+show_percentage = false
